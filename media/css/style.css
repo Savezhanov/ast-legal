@@ -1638,6 +1638,7 @@ p.name-r{
     box-sizing: border-box;
     cursor: pointer;
     transition: 0.2s;
+    color: #000000;
 }
 .doc-item:hover{
     -webkit-box-shadow: 0px 0px 16px 1px rgba(0,182,244,1);
