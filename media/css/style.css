@@ -1624,7 +1624,7 @@ p.name-r{
     margin-left: -0.7em;
 }
 .doc-item{
-    width: 22%;
+    width: 44%;
     display: inline-block;
     vertical-align: top;
     background: rgba(255,255,255,0.53);
@@ -2692,7 +2692,7 @@ button.theme-close:hover{
 .box p{
     margin-bottom: 0.5em;
     line-height: normal;
-    margin-top: 0px;
+    margin-top: 0.5em;
 }
 .box i{
     font-size: 9pt;
@@ -2899,4 +2899,18 @@ img.line5{
     top: 18%;
     position: absolute;
     font-size: 1em;
+}
+.box h2{
+    color:#000000;
+}
+.box ul{
+    font-size: 9pt;
+}
+.doc-item-folder:hover{
+    cursor: pointer;
+}
+#doc-open-folder:hover {
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(0,182,244,1);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0,182,244,1);
+    box-shadow: 0px 0px 11px 1px rgba(0,182,244,1);
 }

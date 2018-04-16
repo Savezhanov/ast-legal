@@ -40,7 +40,7 @@
         <div class="doc-right">
             <div class="doc-right-content active" id="doc-1">
                 <? foreach ($doc_folder as $folder_key => $folder_value){ ?>
-                    <a href="" class="doc-items" data-id="<?=($folder_key+1)?>" data-folder="<?=$folder_value->folder_title?>">
+                <a href="" class="doc-items" data-id="<?=($folder_key+1)?>" data-folder="<?=$folder_value->folder_title?>">
                         <span><?=$folder_value->folder_title?></span>
                     </a>
                 <? } ?>
@@ -141,7 +141,6 @@
             success:function(data){
                 $(".doc-right-content").fadeOut().promise().done(function () {
                     $(".doc-right-content").html(data).fadeIn();
-                    //console.log(data);
                 });
             }
         })
@@ -152,7 +151,6 @@
     $(".doc-items").live("click",function(e) {
             e.preventDefault();
             var folder = $(this).data('folder');
-            /*alert(folder);*/
                 $.ajax({
                     url: "/Docs/getsubfolders",
                     type: "post",
@@ -163,14 +161,47 @@
                         $('.doc-right-content').fadeOut().promise().done(function () {
                             $('.doc-open').html(data).fadeIn();
                         });
-                        console.log(data);
                     }
                 })
-            /*$('.doc-right-content').fadeOut().promise().done(function () {
-                $('#doc-open-' + id).fadeIn();
-            })*/
         }
     );
+    //Click subfolder
+    $(".doc-item-folder").live("click",function (e) {
+       e.preventDefault();
+        var subfolder = $(this).data('subfolder');
+        $.ajax({
+            url: "/Docs/getdocuments",
+            type: "post",
+            data: {
+                'subfolder': subfolder
+            },
+            success:function(data){
+                $('.doc-open').fadeOut().promise().done(function () {
+                    $('.doc-open').html(data).fadeIn();
+                });
+            }
+        })
+    });
+
+    //Click subsubfolder
+    $("#doc-subsubfolder").live("click",function(e) {
+        e.preventDefault();
+            var subsubfolder = $(this).data('subsubfolder');
+        $.ajax({
+            url: "/Docs/getdocuments",
+            type: "post",
+            data: {
+                'subsubfolder': subsubfolder
+            },
+            success:function(data){
+                $('.doc-open').fadeOut().promise().done(function () {
+                    $('.doc-open').html(data).fadeIn();
+                });
+            }
+        })
+        }
+    );
+
     /*
     $(".doc-item").click(function(e) {
             e.preventDefault();
