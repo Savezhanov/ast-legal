@@ -2905,7 +2905,10 @@ img.line5{
     color:#000000;
 }
 .box ul{
-    font-size: 9pt;
+    font-size: 12pt;
+}
+.box li{
+    font-size: 12pt;
 }
 .doc-item-folder:hover{
     cursor: pointer;
