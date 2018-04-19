@@ -44,8 +44,10 @@
         <div class="doc-left laws">
             <div class="laws-menu">
                 <div class="result-block">
-                    <?/*$result = $_GET['sphere']*/?>
                     <?=$get_date?>
+                    <?=$get_status?>
+                    <?=$get_choice?>
+                    <?=$get_sphere?>
                     <p class="result-title"><?=$result?></p>
                     <!--<span class="result">Найденно 4 документа</span>-->
                 </div>
@@ -57,8 +59,8 @@
                             <div class="border-bottom"></div>
                             <div class="select">
                                 <ul class="group1">
-                                    <li><input  type="radio" name="group1" id="r1"><label data-choice="0" for="r1" class="active">Закон</label></li>
-                                    <li><input  type="radio" name="group1" id="r2"><label data-choice="1" for="r2">Кодекс</label></li>
+                                    <li><input  type="radio" name="group1" id="r1"><label data-choice="0"><a class="active" href="?ch=1&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Закон</a></label></li>
+                                    <li><input  type="radio" name="group1" id="r2"><label data-choice="1"><a href="?ch=2&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Кодекс</a></label></li>
                                 </ul>
                             </div>
                         </div>
@@ -71,8 +73,8 @@
                             <div class="border-bottom"></div>
                             <div class="select">
                                 <ul class="group2">
-                                    <li><input  type="radio" name="group2" id="r3"><label data-status="0" for="r3" class="active">Действующий</label></li>
-                                    <li><input  type="radio" name="group2" id="r4"><label data-status="1" for="r4">Прекративший действие</label></li>
+                                    <li><input  type="radio" name="group2" id="r3"><label data-status="0"><a class="active" href="?ch=<?=$get_choice?>&st=0&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Действующий</a></label></li>
+                                    <li><input  type="radio" name="group2" id="r4"><label data-status="1"><a href="?ch=<?=$get_choice?>&st=1&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Прекративший действие</a></label></li>
                                 </ul>
                             </div>
                         </div>
@@ -90,13 +92,14 @@
                             <div class="border-bottom"></div>
                             <div class="select">
                                 <ul class="group3">
-                                    <? foreach ($laws_year as $key=>$value) {
-                                        if($key == 0){ ?>
-                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" class="active" for="r<?=(5+$key)?>"><a href="?year=<?=$value->adoption_date?>"><?=$value->adoption_date?></a></label></li>
-                                        <? }else { ?>
-                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" for="r<?=(5+$key)?>"><a href="?year=<?=$value->adoption_date?>"><?=$value->adoption_date?></a></label></li>
-                                        <? }
-                                    } ?>
+                                    <? foreach ($laws_year as $key=>$value) {?>
+                                        <? if($key == 0 ){?>
+                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a class="active" href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
+                                        <? }else {?>
+                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
+                                        <? } ?>
+
+                                    <? } ?>
                                 </ul>
                             </div>
                         </div>
@@ -118,10 +121,10 @@
                                 <ul class="group4">
                                     <? foreach ($laws_sphere as $key=>$value) { ?>
                                         <? if ($key == 0) { ?>
-                                            <li><input type="radio" name="group4" id="r<?=(100+$key)?>"><label data-name="<?=$value->sphere?>" class="active" for="r<?=(100+$key)?>"><a href="?sphere=<?=$value->sphere?>"><?=$value->sphere?></a></label></li>
-                                        <? }else { ?>
-                                            <li><input  type="radio" name="group4" id="r<?=(100+$key)?>"><label data-name="<?=$value->sphere?>" for="r<?=(100+$key)?>"><a href="?sphere=<?=$value->sphere?>"><?=$value->sphere?></a></label></li>
-                                            <? } ?>
+                                            <li><input type="radio" name="group4" id="r<?=(100+$key)?>"><label data-name="<?=$value->sphere?>"><a class="active" href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$value->sphere?>"><?=$value->sphere?></a></label></li>
+                                        <? }else {?>
+                                            <li><input type="radio" name="group4" id="r<?=(100+$key)?>"><label data-name="<?=$value->sphere?>"><a href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$value->sphere?>"><?=$value->sphere?></a></label></li>
+                                        <? } ?>
                                     <? } ?>
                                 </ul>
                             </div>
@@ -137,16 +140,14 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="laws-right">
             <div class="laws-right-con" id="laws-items-1">
                 <? foreach ($laws as $key=>$value){ ?>
                     <a href="laws/law<?=$value->id?>" class="laws-right-item">
-                        <div class="laws-number"><?=$key+1?><img src="/media/img/after2.png"></div>
+                        <div class="laws-number"><img src="/media/img/after2.png"></div>
                         <ul>
                             <li class="laws-title"><?=$value->law_title?></li>
-                            <!--<li class="laws-text">Кодекс Республики Казахстан от 5 июля 2014 года № 234-V ЗРК.</li>-->
                         </ul>
                     </a>
                 <? } ?>
@@ -158,19 +159,61 @@
             </div>
         </div>
     </div>
-<!--
- <script>
+<script>
+    var url = window.location.href;
+    $(".select .group1 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group2 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group3 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group4 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select li a.active").parent('label').parent('li').find('input').css({'background-color':'#00b7f4'})
+
+    /*$(".select li").click(function (e) {
+        e.preventDefault();
+
+    })*/
+    /*var url = window.location.href;
+    $(".menu-item").each(function () {
+        var href = $(this).find("a").attr("href");
+        if (url.indexOf(href) + 1) {
+            $(this).addClass('active');
+        }
+    });*/
+</script>
+<!-- <script>
      $(document).ready(function () {
          var adoption_date = $(".group3 label.active").data('year');
+         console.log("test");
+         console.log(adoption_date);
          var status = $(".group2 label.active").data('status');
          var choice = $(".group1 label.active").data('choice');
          $.ajax({
-             url: "/Laws/getlaws",
+             url: "/Laws/index",
              type: "post",
              data: {'adoption_date': adoption_date, 'status': status, 'choice': choice},
-             success:function(data) {
-                 console.log(data);
-             }
          })
      });
  </script>-->

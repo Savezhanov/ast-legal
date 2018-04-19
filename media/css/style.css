@@ -1712,8 +1712,21 @@ p.name-r{
 .select label.active{
     color: #00b7f4;
 }
-
-
+.select a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+.select a.active{
+    color: #00b7f4;
+}
+.select input[type="radio"] {
+    pointer-events: none;
+}
+.select a.active+input {
+    background-color:#00b7f4;
+}
 input[type="radio"] {
     margin: 0;
     border-radius: 50%;
