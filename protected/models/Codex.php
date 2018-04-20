@@ -1,5 +1,5 @@
 <?
-class Laws extends CActiveRecord
+class Codex extends CActiveRecord
 {
     public static function model($className=__CLASS__)
     {
@@ -8,12 +8,12 @@ class Laws extends CActiveRecord
 
     public static function modelTitle()
     {
-        return 'Законы';
+        return 'Кодексы';
     }
 
     public function tableName()
     {
-        return 'laws';
+        return 'codex';
     }
 
     public function getNiceDate() {
@@ -23,9 +23,9 @@ class Laws extends CActiveRecord
     public function rules()
     {
         return array(
-            array('title,', 'length', 'max'=>5000),
-            array('sphere','length','max'=>5000),
-            array('document', 'length', 'max'=>9000000),
+            array('title,', 'length', 'max'=>255),
+            array('sphere','length','max'=>500),
+            array('document', 'length', 'max'=>900000),
             array('status,adoption_date', 'numerical', 'integerOnly'=>true),
         );
     }

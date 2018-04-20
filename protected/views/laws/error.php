@@ -1,10 +1,10 @@
  <div class="mobile-visible mobile-laws">
         <div class="l-flex">
-                <div class="l-flex-item active" data-choice="1">
-                    <span><a href="?ch=1&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Закон</a></span>
-                </div>
-            <div class="l-flex-item" data-choice="2">
-                <span><a href="?ch=1&st=<?=$get_status?>&dt=<?=$get_date?>&sph=<?=$get_sphere?>">Кодекс</a></span>
+            <div class="l-flex-item active">
+                <span>Закон</span>
+            </div>
+            <div class="l-flex-item">
+                <span>Кодекс</span>
             </div>
         </div>
 
@@ -88,16 +88,13 @@
                             <div class="border-bottom"></div>
                             <div class="select">
                                 <ul class="group3">
-                                    <? if ($laws_year != null) { ?>
-                                        <? foreach ($laws_year as $key=>$value) {?>
-                                            <? if($key == 0 ){?>
-                                                <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a class="active" href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
-                                            <? }else {?>
-                                                <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
-                                            <? } ?>
+                                    <? foreach ($laws_year as $key=>$value) {?>
+                                        <? if($key == 0 ){?>
+                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a class="active" href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
+                                        <? }else {?>
+                                            <li><input  type="radio" name="group3" id="r<?=(5+$key)?>"><label data-year="<?=$value->adoption_date?>" ><a href="?ch=<?=$get_choice?>&st=<?=$get_status?>&dt=<?=$value->adoption_date?>&sph=<?=$get_sphere?>"><?=$value->adoption_date?></a></label></li>
                                         <? } ?>
-                                    <? }else { ?>
-                                        <li><input  type="radio" name="group3" id="r<?=(5)?>"><label><a class="active">Результатов нету</a></label></li>
+
                                     <? } ?>
                                 </ul>
                             </div>
@@ -142,26 +139,12 @@
         </div>
         <div class="laws-right">
             <div class="laws-right-con" id="laws-items-1">
-                <?if ($get_choice == 1){ ?>
-                    <? foreach ($laws as $key=>$value){ ?>
-                        <a href="laws/law<?=$value->id?>" class="laws-right-item">
-                            <div class="laws-number"><img src="/media/img/after2.png"></div>
-                            <ul>
-                                <li class="laws-title"><?=$value->title?></li>
-                            </ul>
-                        </a>
-                    <? } ?>
-                <? }else { ?>
-                    <? foreach ($laws as $key=>$value){ ?>
-                        <a href="laws/codex<?=$value->id?>" class="laws-right-item">
-                            <div class="laws-number"><img src="/media/img/after2.png"></div>
-                            <ul>
-                                <li class="laws-title"><?=$value->title?></li>
-                            </ul>
-                        </a>
-                    <? } ?>
-                <? } ?>
-
+                    <a class="laws-right-item">
+                        <div class="laws-number"></div>
+                        <ul>
+                            <h2>По вашему запросу ничего не найдено.<br>Попробуйте другие ключевые слова.<br><br></h2>
+                        </ul>
+                    </a>
             </div>
             <div class="pagination">
                 <ul>
@@ -170,7 +153,50 @@
             </div>
         </div>
     </div>
+<script>
+    var url = window.location.href;
+    $(".select .group1 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group2 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group3 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group4 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select li a.active").parent('label').parent('li').find('input').css({'background-color':'#00b7f4'})
 
+    /*$(".select li").click(function (e) {
+        e.preventDefault();
+
+    })*/
+    /*var url = window.location.href;
+    $(".menu-item").each(function () {
+        var href = $(this).find("a").attr("href");
+        if (url.indexOf(href) + 1) {
+            $(this).addClass('active');
+        }
+    });*/
+</script>
 <!-- <script>
      $(document).ready(function () {
          var adoption_date = $(".group3 label.active").data('year');

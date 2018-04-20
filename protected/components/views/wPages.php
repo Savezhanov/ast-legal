@@ -153,7 +153,7 @@ if ($this->pages > 1):
         }
         $mypage = $get['page'];
         if ($this->page < $this->pages):?>
-            <a href="?page=<?=$mypage?>"><span class="link"><?=$array[Yii::app()->session->itemAt('language')]['sled']?> →</span></a>
+            <a href="<?=$url?>&page=<?=$mypage?>"><span class="link"><?=$array[Yii::app()->session->itemAt('language')]['sled']?> →</span></a>
         <? else: $right = '#'; ?>
             <span class="link"><?=$array[Yii::app()->session->itemAt('language')]['sled']?> →</span>
         <? endif;?>

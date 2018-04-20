@@ -99,6 +99,39 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
     });
+    //Laws page
+    var url = window.location.href;
+    $(".select .group1 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group2 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group3 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select .group4 li").each(function () {
+        var href = $(this).find("a").attr("href");
+        console.log();
+        if (decodeURI(url).indexOf(decodeURI(href)) + 1) {
+            $(this).find("a").addClass('active');
+        }else $(this).find("a").removeClass('active');
+    });
+    $(".select li a.active").parent('label').parent('li').find('input').css({'background-color':'#00b7f4'})
+
+
 
     $('#popup__toggle').click(function () {
         $('.black-bg').show();
