@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="187074f3-6dc1-4647-9d39-fedc10f2617f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/protected/models/Codex.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/protected/views/laws/error.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/media/css/style.css" afterPath="$PROJECT_DIR$/media/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/media/js/script.js" afterPath="$PROJECT_DIR$/media/js/script.js" />
-      <change beforePath="$PROJECT_DIR$/protected/components/views/wPages.php" afterPath="$PROJECT_DIR$/protected/components/views/wPages.php" />
-      <change beforePath="$PROJECT_DIR$/protected/controllers/LawsController.php" afterPath="$PROJECT_DIR$/protected/controllers/LawsController.php" />
-      <change beforePath="$PROJECT_DIR$/protected/models/Laws.php" afterPath="$PROJECT_DIR$/protected/models/Laws.php" />
-      <change beforePath="$PROJECT_DIR$/protected/views/laws/index.php" afterPath="$PROJECT_DIR$/protected/views/laws/index.php" />
-      <change beforePath="$PROJECT_DIR$/protected/views/laws/lawsfull.php" afterPath="$PROJECT_DIR$/protected/views/laws/lawsfull.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/protected/controllers/LawsController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="221">
-                  <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+                  <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -143,7 +134,7 @@
             <entry file="file://$PROJECT_DIR$/protected/views/laws/index.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-344">
-                  <caret line="96" column="51" lean-forward="true" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+                  <caret line="96" column="51" lean-forward="false" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
@@ -546,14 +537,7 @@
       <workItem from="1523876632109" duration="1133000" />
       <workItem from="1524113004568" duration="19254000" />
       <workItem from="1524158641322" duration="3674000" />
-      <workItem from="1524207986875" duration="4563000" />
-    </task>
-    <task id="LOCAL-00041" summary="commits">
-      <created>1521085468610</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1521085468610</updated>
+      <workItem from="1524207986875" duration="4663000" />
     </task>
     <task id="LOCAL-00042" summary="finance">
       <created>1521087287195</created>
@@ -891,11 +875,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524134391142</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="laws commit">
+      <created>1524224189945</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1524224189945</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="517126000" />
+    <option name="totallyTimeSpent" value="517226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1321,7 +1312,7 @@
     <entry file="file://$PROJECT_DIR$/protected/views/laws/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-344">
-          <caret line="96" column="51" lean-forward="true" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+          <caret line="96" column="51" lean-forward="false" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1329,7 +1320,7 @@
     <entry file="file://$PROJECT_DIR$/protected/controllers/LawsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <caret line="75" column="31" lean-forward="false" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
           <folding />
         </state>
       </provider>
