@@ -268,7 +268,7 @@
                         <input type="text"  id="review_name" name="review_name" placeholder="Имя" required>
                         <input type="number" min="1" id="review_age" name="review_age"  placeholder="Возраст" required>
                         <textarea placeholder="Ваш отзыв" id="review" name="review"></textarea>
-                        <input type="file" name="image" id="image" />
+                        <input type="file" name="Reviews[image][0]" id="image" />
                         <button type="submit"> Оставить отзыв</button>
                     </form>
                 </div>
