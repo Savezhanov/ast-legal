@@ -6,7 +6,7 @@
         <div class="img-circleblock" style="transform-origin: center;"></div></div>
     </a>
     <div id="call-modal">
-    <div class="close"></div>
+        <div class="close"></div>
             <div class="bottom-right-form">
             <div class="result3">
                 <p class="bold">Спасибо, Ваша заявка принята!</p>

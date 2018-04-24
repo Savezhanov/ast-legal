@@ -2627,6 +2627,43 @@ button.theme-close:hover{
     display: block;
     transform: translate(0) translateZ(0);
 }
+#review-modal{
+    display: none;
+    position: fixed;
+    width: 25%;
+    top: 27%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1em;
+    padding-top: 2.5em;
+    border-radius: 5px;
+}
+#review-modal button{
+    -webkit-clip-path: polygon(0 0, 101% 0, 101% 101%, 0% 101%)!important;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0% 101%)!important;
+    width: auto!important;
+    position: static;
+    margin: 0 auto;
+    margin-top: 1em;
+    display: block;
+    transform: translate(0) translateZ(0);
+}
+.close-review{
+    background-image: url(../img/close.png);
+    background-size: 100% 100%;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+.close-review:hover{
+    opacity: 0.6;
+}
 .close{
     background-image: url(../img/close.png);
     background-size: 100% 100%;
@@ -2683,6 +2720,17 @@ button.theme-close:hover{
     padding-top: 1.05em;
 }
 .result3{
+    display: none;
+    padding-bottom: 1.05em;
+    padding-top: 1.05em;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.review_result3{
     display: none;
     padding-bottom: 1.05em;
     padding-top: 1.05em;

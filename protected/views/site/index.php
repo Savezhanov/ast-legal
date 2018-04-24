@@ -238,8 +238,9 @@
                 </div>
             </div>
             <div class="preim-box-item">
-                <p class="preim-title no mobile-none" id="preim-reviews">Отзывы наших</p><br>
+                <p class="preim-title no mobile-none" id="preim-reviews">Отзывы наших<?=$review?></p><br>
                 <p class="preim-title no2 mobile-none">клиентов</p>
+                <button type="submit" class="button-review">Оставить отзыв</button>
                 <p class="preim-title mobile-visible inline">Отзывы наших клиентов</p>
                 <div class="reviews">
                     <?foreach ( $reviews as $key => $value ){?>
@@ -254,6 +255,22 @@
                             </div>
                         </div>
                     <? } ?>
+                </div>
+            </div>
+            <div id="review-modal">
+                <div class="close-review"></div>
+                <div class="bottom-right-form">
+                    <div class="review_result3">
+                        <p class="bold">Спасибо, Ваш отзыв принят!</p>
+                        <p>После проверки модератором, ваш отзыв появиться на сайте</p>
+                    </div>
+                    <form id="review" class="form" >
+                        <input type="text"  id="review_name" name="review_name" placeholder="Имя" required>
+                        <input type="number" min="1" id="review_age" name="review_age"  placeholder="Возраст" required>
+                        <textarea placeholder="Ваш отзыв" id="review" name="review"></textarea>
+                        <input type="file" name="image" id="image" />
+                        <button type="submit"> Оставить отзыв</button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -23,9 +23,9 @@ class SiteController extends Controller {
         $reviews = Reviews::model()->findAll($criteria);
 		
         $financecategory = Financecategory::model()->findAll($criteria);
-		
+        $name = $_GET['name'];
         $this->pageTitle = "AST";
-        $this->render('index',array( "reviews" => $reviews,"financecategory" => $financecategory ));
+        $this->render('index',array( "reviews" => $reviews,"financecategory" => $financecategory ,"review"=>$name));
     }
 
     public function actionLogin() {
@@ -88,6 +88,8 @@ class SiteController extends Controller {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
+
+
 }
 
 ?>

@@ -30,8 +30,6 @@ $(document).ready(function () {
             $('.finance-right-item').animate({height: '18em'});
             text.text('Читать дальше');
         }
-
-
     });
 
     //Send phone number, phone button main page
@@ -64,8 +62,40 @@ $(document).ready(function () {
             }
         });
     }
+    $('.button-review').click(function (e) {
+        e.preventDefault();
+        $('.black-bg').show();
+        $('#review-modal').fadeIn().addClass('animated fadeInDown');
+    });
+    $('#review-modal').submit(function (e) {
 
+       e.preventDefault();
+        const formData = new FormData(document.forms[4])
+       // var name = $("#review_name").val();
+       // var review = $('textarea#review').val();
+       // var age = $("#review_age").val();
+       // var file = $("#file")[0].files[0];
+       // console.log(review);
+        $.ajax({
+            type: "POST",
+            url: "../reviews/reviewform",
+            processData: false,
+            contentType: false,
+            data: formData,
+            success:function(data){
+                $(this).hide();
+                $('form.form').css('visibility', 'hidden').promise().done(function () {
+                    $('.review_result3').fadeIn(200)
+                });
+                console.log(data);
+            }
+       });
+    });
+    $('.close-review').click(function () {
+        $('.black-bg').hide();
+        $('#review-modal').fadeOut(0);
 
+    })
 
 
     $('.add-theme button').click(function (e) {
@@ -140,6 +170,7 @@ $(document).ready(function () {
     $('.black-bg').click(function () {
         $('.black-bg').hide();
         $('#call-modal').fadeOut(0);
+        $('#review-modal').fadeOut(0);
     });
     $('.close').click(function () {
         $('.black-bg').hide();
