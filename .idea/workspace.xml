@@ -4,6 +4,7 @@
     <list default="true" id="187074f3-6dc1-4647-9d39-fedc10f2617f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/media/css/style.css" afterPath="$PROJECT_DIR$/media/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,8 +67,8 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="264" column="28" lean-forward="true" selection-start-line="264" selection-start-column="28" selection-end-line="264" selection-end-column="28" />
+                <state relative-caret-position="324">
+                  <caret line="274" column="27" lean-forward="true" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -107,17 +108,17 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/media/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="50728">
-                  <caret line="2984" column="1" lean-forward="false" selection-start-line="2984" selection-start-column="1" selection-end-line="2984" selection-end-column="1" />
+                <state relative-caret-position="256">
+                  <caret line="2986" column="17" lean-forward="false" selection-start-line="2986" selection-start-column="17" selection-end-line="2986" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/media/js/script.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
@@ -311,11 +312,11 @@
         <option value="$PROJECT_DIR$/protected/controllers/LawsController.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/header.php" />
         <option value="$PROJECT_DIR$/protected/lib/SQL.php" />
-        <option value="$PROJECT_DIR$/media/css/style.css" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ReviewsController.php" />
         <option value="$PROJECT_DIR$/media/js/script.js" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
+        <option value="$PROJECT_DIR$/media/css/style.css" />
       </list>
     </option>
   </component>
@@ -531,14 +532,7 @@
       <workItem from="1524719186083" duration="244000" />
       <workItem from="1524726305584" duration="189000" />
       <workItem from="1524775947097" duration="63000" />
-      <workItem from="1524802501078" duration="5376000" />
-    </task>
-    <task id="LOCAL-00046" summary="commits">
-      <created>1521090820958</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1521090820958</updated>
+      <workItem from="1524802501078" duration="5646000" />
     </task>
     <task id="LOCAL-00047" summary="financee changes">
       <created>1521091018821</created>
@@ -876,11 +870,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524717411359</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="review commit again">
+      <created>1524808255911</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1524808255912</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="560821000" />
+    <option name="totallyTimeSpent" value="561091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1248,14 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50728">
-          <caret line="2984" column="1" lean-forward="false" selection-start-line="2984" selection-start-column="1" selection-end-line="2984" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/timesafe/views/user/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1330,8 +1323,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="264" column="28" lean-forward="true" selection-start-line="264" selection-start-column="28" selection-end-line="264" selection-end-column="28" />
+        <state relative-caret-position="491">
+          <caret line="271" column="80" lean-forward="false" selection-start-line="271" selection-start-column="80" selection-end-line="271" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="2986" column="17" lean-forward="false" selection-start-line="2986" selection-start-column="17" selection-end-line="2986" selection-end-column="17" />
           <folding />
         </state>
       </provider>

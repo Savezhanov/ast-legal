@@ -262,6 +262,8 @@
                 <div class="bottom-right-form">
                     <div class="review_result3">
                         <p class="bold">Спасибо, Ваш отзыв принят!</p>
+                        <br>
+                        <br>
                         <p>После проверки модератором, ваш отзыв появиться на сайте</p>
                     </div>
                     <form id="review" class="form" >
