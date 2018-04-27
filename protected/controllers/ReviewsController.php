@@ -1,5 +1,5 @@
 <?php
-class ReviewsController extends RController
+class ReviewsController extends Controller
 {
     public function actionReviewform()
     {
