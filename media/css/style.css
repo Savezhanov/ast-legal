@@ -2983,15 +2983,3 @@ img.line5{
     text-decoration: none;
     color: #000000;
 }
-.preim-box-item button {
-    padding: 0% 0.8%;
-    border: none;
-    outline: 0;
-    background: #0e3d5e;
-    border-radius: 7px;
-    color: #ffffff;
-    font-size: 0.9vw;
-    transition: 1s;
-    width: 9%;
-    cursor: pointer;
-}
