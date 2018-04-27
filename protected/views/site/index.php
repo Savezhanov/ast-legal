@@ -240,7 +240,7 @@
             <div class="preim-box-item">
                 <p class="preim-title no mobile-none" id="preim-reviews">Отзывы наших<?=$review?></p><br>
                 <p class="preim-title no2 mobile-none">клиентов</p>
-                <button type="submit" class="button-review">Оставить отзыв</button>
+                <button type="submit" class="button-review" style="padding: 0% 1%; border: none; outline: 0;background: #0e3d5e;border-radius: 7px;color: #ffffff;   font-size: 0.9vw;transition: 1s;width: 9%; cursor: pointer">Оставить отзыв</button>
                 <p class="preim-title mobile-visible inline">Отзывы наших клиентов</p>
                 <div class="reviews">
                     <?foreach ( $reviews as $key => $value ){?>
