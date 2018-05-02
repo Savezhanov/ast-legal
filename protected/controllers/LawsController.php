@@ -9,7 +9,8 @@ class LawsController extends Controller {
         $get_sphere = $_GET['sph']; //берем название сферы
 
         //Проверяем нажаты Законы или Кодексы
-        if(isset($get_choice) AND $get_choice == 1){
+            if(isset($get_choice) AND $get_choice == 1){
+
             $criteria = new CDbCriteria();
             $criteria->select = 'sphere';
             $criteria->condition = "status = '$get_status'";
@@ -28,6 +29,18 @@ class LawsController extends Controller {
             $get_date = $_GET['dt']; //берем Дату принятия
             $get_sphere = $_GET['sph']; //берем название сферы
 
+                if( $get_sphere == null && $get_status == null && $get_sphere == null ){
+                    $cr = new CDbCriteria();
+                    //Берем все Законы
+                    $count = Laws::model()->count($cr);
+                    $pages = new CPagination($count);
+                    $pages->pageSize = 4;
+                    $pages->applyLimit($cr);
+                    $laws = Laws::model()->findAll($cr);
+
+                    $this->render('index',array("laws_sphere"=>$laws_sphere,"laws"=>$laws,"pages"=>$pages,"laws_year"=>$laws_year,"get_choice"=>$get_choice,"get_status"=>$get_status,"get_date"=>$get_date,"get_sphere"=>$get_sphere));
+
+                }
                 $cr = new CDbCriteria();
                 //Берем те Законы которые нужны
                 $cr->condition = "status = '$get_status' AND adoption_date = '$get_date' AND sphere = '$get_sphere'";
