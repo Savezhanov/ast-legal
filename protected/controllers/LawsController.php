@@ -34,7 +34,7 @@ class LawsController extends Controller {
                     //Берем все Законы
                     $count = Laws::model()->count($cr);
                     $pages = new CPagination($count);
-                    $pages->pageSize = 4;
+                    $pages->pageSize = 3;
                     $pages->applyLimit($cr);
                     $laws = Laws::model()->findAll($cr);
 
