@@ -97,7 +97,7 @@
             </div>
             <div class="menu-item">
                 <div class="menu-hover"></div>
-                <a href="/laws?ch=1">Законы и кодексы</a>
+                <a href="/laws?ch=1&st=&dt=&sph=">Законы и кодексы</a>
             </div>
             <div class="menu-item">
                 <div class="menu-hover"></div>
