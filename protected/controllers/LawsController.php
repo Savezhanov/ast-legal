@@ -39,7 +39,6 @@ class LawsController extends Controller {
                     $laws = Laws::model()->findAll($cr);
 
                     $this->render('index',array("laws_sphere"=>$laws_sphere,"laws"=>$laws,"pages"=>$pages,"laws_year"=>$laws_year,"get_choice"=>$get_choice,"get_status"=>$get_status,"get_date"=>$get_date,"get_sphere"=>$get_sphere));
-
                 }
                 $cr = new CDbCriteria();
                 //Берем те Законы которые нужны
@@ -67,6 +66,18 @@ class LawsController extends Controller {
                 $cr_year->group = "adoption_date";
                 $cr_year->order ='adoption_date DESC';
                 $laws_year = Codex::model()->findAll($cr_year);
+
+                if( $get_sphere == null && $get_status == null && $get_sphere == null ){
+                    $cr = new CDbCriteria();
+                    //Берем все Кодексы
+                    $count = Codex::model()->count($cr);
+                    $pages = new CPagination($count);
+                    $pages->pageSize = 4;
+                    $pages->applyLimit($cr);
+                    $laws = Codex::model()->findAll($cr);
+
+                    $this->render('index',array("laws_sphere"=>$laws_sphere,"laws"=>$laws,"pages"=>$pages,"laws_year"=>$laws_year,"get_choice"=>$get_choice,"get_status"=>$get_status,"get_date"=>$get_date,"get_sphere"=>$get_sphere));
+                }
 
                 $cr = new CDbCriteria();
                 //Берем те Кодексы которые нужны
