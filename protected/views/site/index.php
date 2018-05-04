@@ -31,7 +31,6 @@
         <img src="/media/img/line3.png">
     </div>
     <div class="m-margin">
-        
         <? foreach ($financecategory as $finance_key => $finance_value) { ?>  
             <? $number = $finance_key+1; ?>
             <div class="sfera a<?=$number?>">
@@ -58,72 +57,6 @@
             </div>
             </div>
         <? } ?>
-
-        <!-- <div class="sfera a2">
-            <a href="finance" class="sfera-img parallax2">
-                <img src="/media/img/icon-3.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number">02</p>
-                <p>Лицензирование</p>
-            </div>
-        </div>
-
-        <div class="sfera a3">
-            <a href="finance" class="sfera-img parallax3">
-                <img src="/media/img/icon-2.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number">03</p>
-                <p>Собственность</p>
-            </div>
-        </div>
-
-        <div class="sfera a6">
-            <a href="finance" class="sfera-img parallax2">
-                <img src="/media/img/icon-6.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number mobile-none">06</p>
-                <p class="mobile-visible number">04</p>
-                <p>Финансы <br class="mobile-visible"> и кредиты</p>
-            </div>
-        </div>
-
-        <div class="sfera a4">
-            <a href="finance" class="sfera-img parallax2">
-                <img src="/media/img/icon-4.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number mobile-none">04</p>
-                <p class="mobile-visible number">05</p>
-                <p>Судебные решения <br>и приговоры</p>
-            </div>
-        </div>
-
-        <div class="sfera a7">
-            <a href="finance" class="sfera-img parallax">
-                <img src="/media/img/icon-7.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number mobile-none">07</p>
-                <p class="mobile-visible number">06</p>
-                <p>Гражданское право</p>
-            </div>
-        </div>
-
-        <div class="sfera a5">
-            <a href="finance" class="sfera-img parallax">
-                <img src="/media/img/icon-5.png">
-            </a>
-            <div class="sfera-text">
-                <p class="number mobile-none">05</p>
-                <p class="mobile-visible number">07</p>
-                <p>Административные <br>и уголовные дела</p>
-            </div>
-        </div>
- -->
-
     </div>
 </div>
 
@@ -171,6 +104,19 @@
         </div>
     </div>
 </div>
+<?/* $images = Booklet::model()->findAll(); */?><!--
+    <?/* foreach ($images as $key => $value ) {*/?>
+        <?/*=$key*/?>
+        <div style="margin: 25px">
+            <img src="<?/*=$value->src_link*/?>" width="400px" height="200px">
+        </div>
+    --><?/* } */?>
+<?/* $legislation = Legislation::model()->findAll();
+    foreach ( $legislation as $key => $value ){
+       echo $value->date;
+    }
+*/?>
+
 <section id="preim">
     <div class="preim">
         <div class="preim-box">

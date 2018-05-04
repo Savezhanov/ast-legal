@@ -142,6 +142,7 @@
         </div>
     </div>
 
+
     <div class="finance-right" id="finance-1">
         <div class="mobile-visible back">
             <img src="/media/img/m-arr.png">
@@ -159,8 +160,119 @@
     </div>
 </div>
 
-<script>
+<p class="preim-title no mobile-none" style="margin-left:10%;">НОРМАТИВНАЯ</p><br>
+<p class="preim-title no2 mobile-none" style="margin-left:10%;">БАЗА</p>
+<p class="preim-title mobile-visible inline">НОРМАТИВНАЯ БАЗА</p>
+<div class=" static">
+    <table align="left" class="table-narrow-first" style="table-layout: auto">
+        <tbody>
+            <tr>
+                <td>№</td>
+                <td><strong>Наименование документа</strong></td>
+                <td><strong>Дата принятия</strong></td>
+                <td><strong><strong>Источник</strong></strong></td>
+            </tr>
+            <? foreach ($legislation as $key => $value){?>
+            <tr>
+                <td><?=$value->column_number?></td>
+                <td><?=$value->name?></td>
+                <td><?=$value->date?></td>
+                <td><a href="<?=$_SERVER['REQUEST_URI']?>/legislation<?=$value->id?>" target="_blank">Подробнее</a></td>
+            </tr>
+            <? } ?>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+</div>
 
+    <p class="preim-title no mobile-none">БРОШЮРЫ И</p><br>
+    <p class="preim-title no2 mobile-none">ИНФОГРАФИКА</p>
+    <p class="preim-title mobile-visible inline">БРОШЮРЫ И ИНФОГРАФИКА</p>
+    <div class="slider-box2">
+        <?foreach ($booklet as $key => $value ) { ?>
+            <div class="booklet-items">
+                <a href="<?=$value->src_link?>" target="_blank" class="material_docs">
+                    <div class="flex">
+                        <div>
+                            <img src="/media/img/booklet/ic_jpg.svg" alt="">
+                        </div>
+                        <div class="material__text">
+                            <h2><?=$value->name?></h2>
+                            <span><?=$value->date?></span>
+                        </div>
+                    </div>
+                    <div class="material__button">Загрузить</div>
+                    <div style="clear: both"></div>
+                </a>
+            </div>
+        <? } ?>
+    </div>
+
+
+<script type="text/javascript" src="/media/js/owl-slider.js"></script>
+
+<!--<div class="row row_16">
+    <div class="flex">
+        <?/*foreach ($booklet as $key => $value ) { */?>
+        <div>
+            <a href="/storage/46/4660cac0848ecb308bd94e5e884c0dc2.jpg" download="Инфографика по химической промышленности .jpg" target="_blank" class="material_docs">
+                <div class="flex">
+                    <div>
+                        <img src="/media/img/booklet/ic_jpg.svg" alt="">
+                    </div>
+                    <div class="material__text">
+                        <h2>Инфографика по химической промышленности </h2>
+                        <span>20 декабря</span>
+                    </div>
+                </div>
+                <div class="material__button">Загрузить</div>
+                <div style="clear: both"></div>
+            </a>
+        </div>
+        <?/* } */?>
+        <a href="/storage/46/4660cac0848ecb308bd94e5e884c0dc2.jpg" download="Инфографика по химической промышленности .jpg" target="_blank" class="material_docs">
+            <div class="flex">
+                <div>
+                    <img src="/media/img/booklet/ic_jpg.svg" alt="">
+                </div>
+                <div class="material__text">
+                    <h2>Инфографика по химической промышленности </h2>
+                    <span>20 декабря</span>
+                </div>
+            </div>
+            <div class="material__button">Загрузить</div>
+            <div style="clear: both"></div>
+        </a>
+        <a href="/storage/46/4660cac0848ecb308bd94e5e884c0dc2.jpg" download="Инфографика по химической промышленности .jpg" target="_blank" class="material_docs">
+            <div class="flex">
+                <div>
+                    <img src="/media/img/booklet/ic_jpg.svg" alt="">
+                </div>
+                <div class="material__text">
+                    <h2>Инфографика по химической промышленности </h2>
+                    <span>20 декабря</span>
+                </div>
+            </div>
+            <div class="material__button">Загрузить</div>
+            <div style="clear: both"></div>
+        </a>
+        <a href="/storage/46/4660cac0848ecb308bd94e5e884c0dc2.jpg" download="Инфографика по химической промышленности .jpg" target="_blank" class="material_docs">
+            <div class="flex">
+                <div>
+                    <img src="/media/img/booklet/ic_jpg.svg" alt="">
+                </div>
+                <div class="material__text">
+                    <h2>Инфографика по химической промышленности </h2>
+                    <span>20 декабря</span>
+                </div>
+            </div>
+            <div class="material__button">Загрузить</div>
+            <div style="clear: both"></div>
+        </a>
+    </div>
+</div>
+-->
+<script>
     /*$('body').on('click','.service-box-item',function(){*/
     //menu clicked
     $('.service-box-item').live("click",function () {

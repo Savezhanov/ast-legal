@@ -36,12 +36,36 @@ class FinanceController extends Controller {
 
         $finance = Finance::model()->findAllByAttributes(array("menu_id"=>$ids));
 
+        //find all legislations
+        $legislation = Legislation::model()->findAll();
+
+        //find all booklets
+        $booklet = Booklet::model()->findAll();
+
+
             if ($check!=null) {
                 $this->pageTitle = "AST";
-                $this->render('category', array("financemenu" => $financemenu, "finance" => $finance ,"articles"=>$articles));
+                $this->render('category', array("financemenu" => $financemenu, "finance" => $finance ,"articles"=>$articles, "url" => $url, "legislation" => $legislation, "booklet" => $booklet));
             } else {
                 throw new CHttpException(404, 'Странца не существует.');
             }
+
+
+    }
+    public function actionLegislation($url){
+        $id = (int) filter_var($url, FILTER_SANITIZE_NUMBER_INT);
+        if( $id!= null) {
+            $this->pageTitle = "AST";
+            $legislation = Legislation::model()->find("id = '$id'");
+            if( $legislation != null ){
+                $this->render('legislation',array("url" => $url, "id" => $id, "model" => $legislation));
+            }else{
+                throw new CHttpException(404, 'Странца не существует.');
+            }
+        }else{
+            throw new CHttpException(404, 'Странца не существует.');
+        }
+
     }
     public function actionGetservices(){
         $menu_id = $_POST['menu'];
